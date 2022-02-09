@@ -287,6 +287,7 @@ DEPENDENCIES
   eventmachine (= 1.2.7)!
   github-pages
   jekyll-include-cache
+  jekyll-remote-theme
 
 BUNDLED WITH
    2.3.6
