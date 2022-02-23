@@ -1,7 +1,11 @@
 ---
-categories: [algorithm, fundamentals]
 title: BFS와 DFS
-
+categories:
+  - algorithm
+  - algonote
+tags:
+  - BFS
+  - DFS
 toc: true
 # toc_icon: fab fa-fw fa-facebook-square
 toc_label: Index

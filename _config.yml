@@ -17,7 +17,7 @@ minimal_mistakes_skin    : "dark"
 
 # Site Settings
 locale                   : "en-KR"
-title                    : "Devnote by Hwang h."
+title                    : "Devspace by Hwang h."
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "hehehwang"
@@ -109,7 +109,7 @@ author:
   name             : "heheHwang"
   avatar           : "/assets/images/hwang.png"
   # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "Hello!"
   location         : "S. Korea"
   email            : hehehwang@gmail.com
   links:

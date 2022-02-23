@@ -10,8 +10,8 @@ main:
     url: /year-archive/
   - title: "Tags"
     url: /tags/
-  - title: "Pages"
-    url: /page-archive/
+  # - title: "Pages"
+  #   url: /page-archive/
 
 main_sidebar:
   - title: "General"
@@ -19,18 +19,18 @@ main_sidebar:
       - title: "About"
         url: /about
       - title: "misc"
-        url: /category/misc
+        url: /misc.
   - title: "Develop"
     url: /develop/
     children:
-      - title: "worklog"
-        url : /develop/worklog
       - title: "devnote"
         url: /develop/devnote
+      - title: "worklog"
+        url : /develop/worklog
   - title: "Algorithm"
     url: /algorithm
     children:
-      - title: "fundamentals"
-        url: /algorithm/fundamentals
+      - title: "algonote"
+        url: /algorithm/algonote
       - title: "problem solving"
         url: /algorithm/problem_solving
