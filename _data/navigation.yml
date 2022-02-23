@@ -6,9 +6,31 @@ main:
     url: /about/
   - title: "Category"
     url: /categories/
-  - title: "Posts"
+  - title: "Posts by "
     url: /year-archive/
   - title: "Tags"
     url: /tags/
   - title: "Pages"
     url: /page-archive/
+
+main_sidebar:
+  - title: "General"
+    children:
+      - title: "About"
+        url: /about
+      - title: "misc"
+        url: /category/misc
+  - title: "Develop"
+    url: /develop/
+    children:
+      - title: "worklog"
+        url : /develop/worklog
+      - title: "devnote"
+        url: /develop/devnote
+  - title: "Algorithm"
+    url: /algorithm
+    children:
+      - title: "fundamentals"
+        url: /algorithm/fundamentals
+      - title: "problem solving"
+        url: /algorithm/problem_solving
