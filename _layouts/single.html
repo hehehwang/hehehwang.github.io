@@ -8,8 +8,6 @@ layout: default
 {% include page__hero_video.html %}
 {% endif %}
 
-
-
 <div id="main" role="main">
   {% include sidebar.html %}
 
@@ -45,8 +43,8 @@ layout: default
         {% include page__meta.html %}
 
         <div class="page__meta" style="margin-top: -0.5em; margin-bottom: 2em">
-          {% include page__taxonomy.html %}
           {% include page__date.html %}
+          {% include page__taxonomy.html %}
           <div>
       </header>
       {% endunless %}
@@ -72,8 +70,8 @@ layout: default
         {% if site.data.ui-text[site.locale].meta_label %}
         <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
         {% include page__date.html %}
+        {% include page__taxonomy.html %}
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}

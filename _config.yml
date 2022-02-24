@@ -211,6 +211,10 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  highlighter: rouge
+  syntax_highlighter_opts:
+        block:
+            line_numbers: true
 
 
 # Sass/SCSS
@@ -289,6 +293,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+      toc: true
+      toc_icon: fas fa-fw fa-indent
+      toc_label: Index
+      toc_sticky: true
       sidebar:
         nav: main_sidebar
       read_time: false
