@@ -6,11 +6,9 @@ categories:
 tags:
   - BFS
   - DFS
-toc: true
-# toc_icon: fab fa-fw fa-facebook-square
-toc_label: Index
-toc_sticky: true
 
+
+description: 상세설명
 ---
 
 그래프 탐색의 기본인 BFS와 DFS에 대해서 알아봅시다.
