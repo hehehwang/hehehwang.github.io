@@ -130,6 +130,7 @@ def KMP(haystack: Sequence, needle: Sequence):
             cursor += matched - failfunc[matched - 1]
             matched = failfunc[matched - 1]
 ```
+## C++
 ```c++
 vector<int> getFailFunc(string &needle) {
   int ln = needle.size();
