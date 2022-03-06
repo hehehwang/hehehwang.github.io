@@ -5,9 +5,9 @@ categories:
   - algonote
 tags:
   - algorithm
-  - kmp
-  - python
-  - C
+  - KMP
+  - Python
+  - C++
 ---
 
 # 개요

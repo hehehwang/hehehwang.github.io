@@ -6,7 +6,8 @@ categories:
 tags:
   - BFS
   - DFS
-
+  - Python
+  - C++
 
 description: 상세설명
 ---
