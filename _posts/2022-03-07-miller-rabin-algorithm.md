@@ -7,7 +7,7 @@ tags:
   - math
   - miller-rabin
   - Python
-  - C++
+  - writting
 mathjax: true
 ---
 
@@ -61,6 +61,21 @@ $$
 다시 말해, $$a^d \equiv 0 \mod x $$ 또는 $$0\leq i<s $$에 대해서 $$a^{2^id} \equiv x-1 \mod x $$가 성립하는지 확인한다.
 
 
+## [base의 개수에 대해서](https://en.wikipedia.org/wiki/Miller–Rabin_primality_test#Testing_against_small_sets_of_bases)
+
+* [`Carl Pomerance; John L. Selfridge; Samuel S. Wagstaff, Jr. (July 1980). "The pseudoprimes to 25·109" (PDF). Mathematics of Computation. 35 (151): 1003–1026. doi:10.1090/S0025-5718-1980-0572872-7.`](https://doi.org/10.1090%2FS0025-5718-1980-0572872-7)
+* [`Jaeschke, Gerhard (1993), "On strong pseudoprimes to several bases", Mathematics of Computation, 61 (204): 915–926, doi:10.2307/2153262, JSTOR 2153262`](https://www.ams.org/journals/mcom/1993-61-204/S0025-5718-1993-1192971-8/)
+
+if n < 2,047, it is enough to test a = 2;
+if n < 1,373,653, it is enough to test a = 2 and 3;
+if n < 9,080,191, it is enough to test a = 31 and 73;
+if n < 25,326,001, it is enough to test a = 2, 3, and 5;
+if n < 3,215,031,751, it is enough to test a = 2, 3, 5, and 7;
+if n < 4,759,123,141, it is enough to test a = 2, 7, and 61;
+if n < 1,122,004,669,633, it is enough to test a = 2, 13, 23, and 1662803;
+if n < 2,152,302,898,747, it is enough to test a = 2, 3, 5, 7, and 11;
+if n < 3,474,749,660,383, it is enough to test a = 2, 3, 5, 7, 11, and 13;
+if n < 341,550,071,728,321, it is enough to test a = 2, 3, 5, 7, 11, 13, and 17.
 
 # 코드
 ## Python
