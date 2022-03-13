@@ -21,7 +21,7 @@ main_sidebar:
       - title: "misc"
         url: /misc.
   - title: "Develop"
-    url: /develop/
+    url: /develop
     children:
       - title: "devnote"
         url: /develop/devnote
