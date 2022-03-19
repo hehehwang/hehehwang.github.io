@@ -37,13 +37,13 @@ $$
 
 # 본론
 
-짝수가 아닌 어떤 수 $$x$$가 소수인지 궁금하다고 하면, $$x-1$$ 은 짝수이므로 2의 지수와 홀수의 곱으로 나타낼 수 있음.
+짝수가 아닌 어떤 수 $$x$$가 소수인지 궁금하다고 하면, $$x-1$$ 은 짝수이므로 2의 지수와 홀수의 곱으로 나타낼 수 있습니다.
 
 $$
 x-1 = 2^s \times d
 $$
 
-이를 페르마의 소정리에 대입한다.
+이를 페르마의 소정리에 대입해봅시다.
 
 $$
 \begin{aligned}
@@ -56,26 +56,53 @@ a^{2^nd}-1 &\equiv 0 \mod x \\
 \end{aligned}
 $$
 
-밀러-라빈 탐색은 각 항들에 대해서 0을 만족하는지 일일히 검사해서 하나라도 만족하는 경우 소수로 판정한다.
+밀러-라빈 탐색은 각 항들에 대해서 0을 만족하는지 일일히 검사해서 하나라도 만족하는 경우 소수로 판정합니다.
 
-다시 말해, $$a^d \equiv 0 \mod x $$ 또는 $$0\leq i<s $$에 대해서 $$a^{2^id} \equiv x-1 \mod x $$가 성립하는지 확인한다.
+다시 말해, $$a^d \equiv 0 \mod x $$ 또는 $$0\leq i<s $$에 대해서 $$a^{2^id} \equiv x-1 \mod x $$가 성립하는지 하는 거죠.
 
 
-## [base의 개수에 대해서](https://en.wikipedia.org/wiki/Miller–Rabin_primality_test#Testing_against_small_sets_of_bases)
+## base의 개수에 대해서
 
+* [Wikipedia](https://en.wikipedia.org/wiki/Miller–Rabin_primality_test#Testing_against_small_sets_of_bases)
 * [`Carl Pomerance; John L. Selfridge; Samuel S. Wagstaff, Jr. (July 1980). "The pseudoprimes to 25·109" (PDF). Mathematics of Computation. 35 (151): 1003–1026. doi:10.1090/S0025-5718-1980-0572872-7.`](https://doi.org/10.1090%2FS0025-5718-1980-0572872-7)
 * [`Jaeschke, Gerhard (1993), "On strong pseudoprimes to several bases", Mathematics of Computation, 61 (204): 915–926, doi:10.2307/2153262, JSTOR 2153262`](https://www.ams.org/journals/mcom/1993-61-204/S0025-5718-1993-1192971-8/)
 
-if n < 2,047, it is enough to test a = 2;
-if n < 1,373,653, it is enough to test a = 2 and 3;
-if n < 9,080,191, it is enough to test a = 31 and 73;
-if n < 25,326,001, it is enough to test a = 2, 3, and 5;
-if n < 3,215,031,751, it is enough to test a = 2, 3, 5, and 7;
-if n < 4,759,123,141, it is enough to test a = 2, 7, and 61;
-if n < 1,122,004,669,633, it is enough to test a = 2, 13, 23, and 1662803;
-if n < 2,152,302,898,747, it is enough to test a = 2, 3, 5, 7, and 11;
-if n < 3,474,749,660,383, it is enough to test a = 2, 3, 5, 7, 11, and 13;
+if n < 2,047, it is enough to test a = 2;\
+if n < 1,373,653, it is enough to test a = 2 and 3;\
+if n < 9,080,191, it is enough to test a = 31 and 73;\
+if n < 25,326,001, it is enough to test a = 2, 3, and 5;\
+if n < 3,215,031,751, it is enough to test a = 2, 3, 5, and 7;\
+if n < 4,759,123,141, it is enough to test a = 2, 7, and 61;\
+if n < 1,122,004,669,633, it is enough to test a = 2, 13, 23, and 1662803;\
+if n < 2,152,302,898,747, it is enough to test a = 2, 3, 5, 7, and 11;\
+if n < 3,474,749,660,383, it is enough to test a = 2, 3, 5, 7, 11, and 13;\
 if n < 341,550,071,728,321, it is enough to test a = 2, 3, 5, 7, 11, 13, and 17.
+if n < 3,825,123,056,546,413,051, it is enough to test a = 2, 3, 5, 7, 11, 13, 17, 19, and 23.\
+if n < 18,446,744,073,709,551,616 = 264, it is enough to test a = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, and 37.\
+if n < 318,665,857,834,031,151,167,461, it is enough to test a = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, and 37.\
+if n < 3,317,044,064,679,887,385,961,981, it is enough to test a = 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, and 41.
+
+| n | bases |
+|---|---|
+| `1 byte = 16` |
+| `2,047` | `2` |
+| `2 byte = 65536` |
+| `1,373,653` | `2, 3` |
+| `9,080,191` | `31, 73` |
+| `25,326,001` | `2, 3, 5` |
+| `4 byte (unsigned int) = 4,294,967,296` |
+| `3,215,031,751` | `2, 3, 5, 7`|
+| `4,759,123,141` | `2, 7, 61`|
+| `1,122,004,669,633` | `2, 13, 1662803`|
+| `2,152,302,898,747` | `2, 3, 5, 7, 11` |
+| `3,474,749,660,383` | `2, 3, 5, 7, 11, 13` |
+| `341,550,071,728,321` | `2, 3, 5, 7, 11, 13, 17` |
+| `3,825,123,056,546,413,051` | `2, 3, 5, 7, 11, 13, 17, 19, 23` |
+| `8 byte (unsigned long long) = 18,446,744,073,709,551,616`|
+| `318,665,857,834,031,151,167,461` | `2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37` |
+| `3,317,044,064,679,887,385,961,981` | `2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41` |
+| `16 byte (__int128_t) = 340,282,366,920,938,463,463,374,607,431,768,211,456` |
+
 
 # 코드
 ## Python
