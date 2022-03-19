@@ -39,7 +39,6 @@ def modpow(base: int, pwr: int, mod: int):
 ```
 
 # C++
-(대충 C++ 코드)
 ```c++
 long long modpow(long long base, long long pwr, long long mod) {
     __int128_t r = 1;
