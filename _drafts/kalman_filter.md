@@ -220,28 +220,59 @@ process noise에 따른 불안정성인 $$Q$$의 영향을 받음을 알 수 있
 
 ## 갱신 Update
 
-갱신 파트에서는 아까 예고한대로 예측값과 관측값을 잘 절충해서 값을 추산하는 단계입니다.
+갱신 파트에서는 아까 예고한대로 예측값($$x_{\bar{k}}$$과 관측값$$z_k$$을 잘 절충해서 값을 추산하는 단계입니다.
 
-
-### Gaussian function의 곱에 대해서
-
-Gaussian function의 곱은 Gaussian function입니다.
 
 ### 칼만 게인 Kalman gain
 
-$$K_k = P_{\bar{k}}H^T(HP_\bar{k}H^T+R)^{-1} $$
+$$ K_k = P_{\bar{k}}H^T(HP_\bar{k}H^T+R)^{-1} $$
+
+칼만 게인은 말하자면 "얼마나 관측치를 믿을 것인가?"에 대한 지표입니다.
+
+$$x$$와 $$z$$간의 변환을 담당하는 $$H$$를 제외하고 식을 잘 살펴보면, 이런 구조입니다.
+
+$$ K_k = \frac{\text{Estimation uncertainty}}{\text{Estimation uncertainty} + \text{Measurement uncertainty}} $$
+
+$$\text{Measurement uncertainty} = R_k$$이 클수록 칼만 게인 $$K$$의 값은 작아지고,\
+그 반대의 경우는 값이 커질 것으로 파악할 수 있습니다.
 
 
-#### 칼만 게인의 뜻 고찰
 
 ### 상태 갱신 State update equation 
 
-$$\hat{x}_{k} = \hat{x}_{\bar{k}} + K_k(z_{k}-H\hat{x}_{\bar{k}}) $$
+$$ \hat{x}_{k} = \hat{x}_{\bar{k}} + K_k(z_{k}-H\hat{x}_{\bar{k}}) $$
+
+칼만 게인을 정했으니, 본격적으로 값의 갱신이 이뤄지는 단계입니다.
+
+어떤 레퍼런스들은 칼만 게인 $$K$$이 곱해진 부분을 Innovation이라 하여 따로 $$S$$로 기술하기도 하는데,\
+이 부분을 잘 살펴보면 관측치 $$z_k$$와 예측치$$\hat{x}_k$$의 차이로 이뤄져있는데,\
+좀 더 과감하게 말하자면 "관측치가 끼치는 영향도"라고 말 할수 있겠습니다.
+
+즉 위 식은 "상태 변수의 추측치의 갱신은, 예측치와 관측치가 끼치는 영향의 적절한 배합을 통해 이뤄진다."\
+고 말하는 셈입니다.
+
+
+#### 칼만 게인과 노이즈 행렬들($$Q$$, $$R$$) 간의 관계
+
+이 시점에서 칼만 게인과 상태 변수를 갱신하는 두 식에 대해서 고찰해봅시다.
+
+$$ 
+\begin{aligned}
+K_k &= P_{\bar{k}}H^T(HP_\bar{k}H^T+R)^{-1} 
+\hat{x}_{k} &= \hat{x}_{\bar{k}} + K_k(z_{k}-H\hat{x}_{\bar{k}}) 
+\end{aligned}
+$$
+
 
 
 ### 공분산 갱신 Covariance update equation 
 
 $$P_{k} = (I-K_kH)P_{\bar{k}} $$
+
+
+### 증명: Gaussian function의 곱
+
+Gaussian function의 곱은 Gaussian function입니다.
 
 
 # 시스템 모델
