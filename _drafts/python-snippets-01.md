@@ -1,5 +1,5 @@
 ---
-title: 파이썬 코드 조각모음 01
+title: 파이썬 코드 조각모음 01 - Pathlib, File operation
 categories:
   - develop
   - devnote
@@ -26,14 +26,15 @@ tags:
 * `f.readline`
 
 ## pickle
-### load
 ```Python
 if Path('picle.pkl').exists():
     obj = pkl.load(open("pickle.pkl", "rb"))
-```
-### write
-```Python
+    
 with open("pickle.pkl", "Wb") as p:
     pkl.dump(obj, p)
 ```
 
+## Json
+```Python
+
+```
