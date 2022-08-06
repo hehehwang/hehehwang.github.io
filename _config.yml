@@ -16,7 +16,7 @@ remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "dark" 
 
 # Site Settings
-locale                   : "en-KR"
+locale                   : "en-US"
 title                    : "Devspace by Hwang h."
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
