@@ -302,6 +302,7 @@ defaults:
         nav: main_sidebar
       read_time: false
       share: false
+      comments: true
       related: true
 
   # _pages
