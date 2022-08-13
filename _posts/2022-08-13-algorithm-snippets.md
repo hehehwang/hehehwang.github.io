@@ -8,7 +8,6 @@ tags:
 ---
 
 # 최단거리 알고리즘
-
 ## Dijkstra
 ### C++
 ```c++
@@ -76,11 +75,12 @@ for (int k = 1; k <= N; k++) {
 
 
 ## SPFA
-
+(TODO)
 
 # Segment Tree
+(TODO)
 
-# SCC
+# Strongly Connected Component
 ## Tarjan
 ```c++
 bool done[MXN];
