@@ -82,6 +82,7 @@ for (int k = 1; k <= N; k++) {
 
 # Strongly Connected Component
 ## Tarjan
+### C++
 ```c++
 bool done[MXN];
 stack<int> scc_stk;
@@ -91,12 +92,10 @@ int tarjan(int node) {
   scc_stk.push(node);
   int result = dfs_no[node] = dfs_id++;
 
-  for (int next_node : adj[node]) {
-    if (!dfs_no[next_node])
-      result = min(result, tarjan(next_node));
-    else if (!done[next_node])
-      result = min(result, dfs_no[next_node]);
-  }
+  for (int next_node : adj[node])
+    if (!done[next_node])
+      result = min(result,
+                   (dfs_no[next_node]) ? dfs_no[next_node] : tarjan(next_node));
 
   if (result == dfs_no[node]) {
     while (1) {
@@ -111,6 +110,32 @@ int tarjan(int node) {
 
   return result;
 }
+```
+### Python
+* recursion limit 주의
+```python
+setrecursionlimit(10 ** 9)
+dfs_id, scc_id = 1, 1
+adj, done, dfs_no, scc_no, scc_stk = [], [], [], [], []
+
+
+def tarjan(node):
+    global dfs_id, scc_id
+    scc_stk.append(node)
+    dfs_no[node] = (result := (dfs_id := dfs_id + 1))
+    for next_node in adj[node]:
+        if not done[next_node]:
+            result = min(result, dfs_no[next_node] or tarjan(next_node))
+
+    if result == dfs_no[node]:
+        while 1:
+            v = scc_stk.pop()
+            scc_no[v] = scc_id
+            done[v] = True
+            if v == node:
+                break
+        scc_id += 1
+    return result
 ```
 
 # ETC
