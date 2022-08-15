@@ -87,13 +87,12 @@ int tarjan(int node) {
   scc_stk.push(node);
   int result = dfs_no[node] = dfs_id++;
 
-  for (int next_node : adj[node]) {
-    if (!dfs_no[next_node])
-      result = min(result, tarjan(next_node));
-    else if (!done[next_node])
-      result = min(result, dfs_no[next_node]);
-  }
-
+  // dfs through child nodes
+  for (int next_node : adj[node])
+    if not done[next_node]:
+        result = min(result, dfs_no[next_node] or tarjan(next_node))
+  
+  // if SCC extraction condition has met
   if (result == dfs_no[node]) {
     while (1) {
       v = scc_stk.top();
@@ -120,4 +119,4 @@ int tarjan(int node) {
 * [백준 강한 연결 요소](https://www.acmicpc.net/step/43)
 
 # 참고자료
-* [Ries 마법의 슈퍼마리오](https://blog.naver.com/kks227/220802519976)
+* [Ries 마법의 슈퍼마리오](https://m.blog.naver.com/kks227/220802519976)

@@ -1,5 +1,5 @@
 ---
-title: Miller-Rabin primality test 밀러-라빈 소수 판정법
+title: 밀러-라빈 소수 판정법 Miller-Rabin primality test 
 categories:
   - algorithm
   - algonote

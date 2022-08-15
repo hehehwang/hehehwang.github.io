@@ -1,5 +1,5 @@
 ---
-title: KMP algorithm
+title: KMP 알고리즘 KMP algorithm
 categories:
   - algorithm
   - algonote
@@ -11,7 +11,7 @@ tags:
 ---
 
 # 개요
-KMP알고리즘(Knuth-Morris-Pratt Algorithm)은 전체 문자열에서 부분 문자열을 빠르게(`O(n+m)`) 찾을 수 있는 알고리즘이다.
+KMP 알고리즘(Knuth-Morris-Pratt Algorithm)은 전체 문자열에서 부분 문자열을 빠르게(`O(n+m)`) 찾을 수 있는 알고리즘이다.
 
 참고: 
   - [나무위키](https://namu.wiki/w/%EB%AC%B8%EC%9E%90%EC%97%B4%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98#s-2.3)
