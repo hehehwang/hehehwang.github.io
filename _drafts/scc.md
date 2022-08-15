@@ -77,7 +77,7 @@ SCC를 구하는 방법의 핵심은, 자신의 자손들이 자신의 조상으
   `done` 배열의 용도
 
 
-### 코드
+### 소스코드
 ```c++
 bool done[MXN];
 stack<int> scc_stk;

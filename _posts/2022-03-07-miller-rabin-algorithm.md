@@ -157,7 +157,7 @@ def isprime_mr(x: int):
         return True
 ```
 
-# 관련 문제
+# 관련문제
 * BOJ
     * [5615 아파트 임대](https://www.acmicpc.net/problem/5615)
 
