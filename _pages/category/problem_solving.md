@@ -2,5 +2,5 @@
 title: problem solving
 layout: category
 permalink: /algorithm/problem_solving/
-taxonomy: ps
+taxonomy: problem_solving
 ---
