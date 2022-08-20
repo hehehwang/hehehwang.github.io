@@ -1,5 +1,5 @@
 ---
-title: hough transform 허프 변환
+title: 허프 변환 hough transform 
 categories:
   - develop
   - devnote

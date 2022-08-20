@@ -1,5 +1,5 @@
 ---
-title: fast exponential 빠른 거듭제곱
+title: 빠른 거듭제곱 fast exponential 
 categories:
   - algorithm
   - algonote
