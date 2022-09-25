@@ -1,5 +1,5 @@
 ---
-title: 2022 라인 하반기 코딩 테스트 후기
+title: 2023 라인 하반기 코딩 테스트 후기
 categories:
   - algorithm
   - problem_solving
