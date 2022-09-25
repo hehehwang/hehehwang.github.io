@@ -269,3 +269,6 @@ def solution(wall: List[str]) -> List[List[int]]:
 r = solution(["....HH", "H..H.H"])
 print(r)
 ```
+
+## 5번 문제
+테스트 시간동안에는 못 풀었는데, 아마 최대공약수로 어떻게 잘 후보군을 추려내는 식으로 풀 수 있을 것 같은데 확실하지는 않다.
