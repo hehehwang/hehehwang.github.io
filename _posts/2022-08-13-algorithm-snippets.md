@@ -111,8 +111,10 @@ int tarjan(int node) {
   return result;
 }
 ```
+
 ### Python
 * recursion limit 주의
+
 ```python
 setrecursionlimit(10 ** 9)
 dfs_id, scc_id = 1, 1
