@@ -41,3 +41,8 @@ exec("print(2015 - sum(map(ord, set(input()))));" * int(input()))
 
 이를 잘 응용하면 k의 배수에 따라서 길이 n의 문자열이 나오도록 합칠 수 있다.
 
+## 타입 캐스팅
+
+* bool -> int:
+    * `int({bool_value})` (x)
+    * `+({bool_value})` (o)
