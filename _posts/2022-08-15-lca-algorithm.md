@@ -181,7 +181,7 @@ int main(void) {
     }
     if (u != v) {
       for (int p = 20; - 1 < p; p--) {
-        if (ancestors[u][p] != ROOT_PAR &&
+        if (ancestors[u][p] != ROOT_PAR &&  
             (ancestors[u][p] != ancestors[v][p])) {
           u = ancestors[u][p];
           v = ancestors[v][p];
