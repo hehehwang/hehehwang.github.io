@@ -9,6 +9,30 @@ tags:
 
 # 최단거리 알고리즘
 ## Dijkstra
+### Python
+```Python
+from heapq import heappop, heappush
+
+adj = [[] for _ in range(N)]
+for _ in range(M):
+    s, e, c = map(int, input().split())
+    adj[s].append((c, e))
+
+INF = int(1e9)+1
+dijk = [(0, st)]
+dist = [INF]*N
+dist[st] = 0
+while dijk:
+    c, v = heappop(dijk)
+    if dist[v] != c: continue
+    for nc, nv in adj[v]:
+        nc += c
+        if dist[nv] <= nc: continue
+        heappush(dijk, (nc, nv))
+        dist[nv] = nc
+print(dist[en])
+```
+
 ### C++
 ```c++
 typedef pair<int, int> PII;
