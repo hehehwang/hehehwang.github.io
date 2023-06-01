@@ -10,7 +10,7 @@ tags:
 # 최단거리 알고리즘
 ## Dijkstra
 ### Python
-```Python
+```python
 from heapq import heappop, heappush
 
 adj = [[] for _ in range(N)]
