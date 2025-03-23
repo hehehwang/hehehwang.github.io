@@ -107,12 +107,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "heheHwang"
+  name             : "Hwang h."
   avatar           : "/assets/images/hwang.png"
   # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Hello!"
-  location         : "S. Korea"
-  email            : hehehwang@gmail.com
+  bio              : "Dare mighty things"
+  # location         : "S. Korea"
+  # email            : hehehwang@gmail.com
   links:
     - label: "E-mail"
       icon: "fas fa-fw fa-envelope-square"
@@ -128,7 +128,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/hehehwang"
+      # url: "https://github.com/hehehwang"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -144,7 +144,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/hehehwang"
+      # url: "https://github.com/hehehwang"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -294,7 +294,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       toc: true
       toc_icon: fas fa-fw fa-indent
       toc_label: 목차
@@ -312,6 +312,6 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       sidebar:
         nav: main_sidebar

@@ -20,8 +20,8 @@
     {%- if site.category_archive.path -%}
         {% assign categories_sorted = post.categories %}
         <span class="page__taxonomy">
-            <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i>
-            <span itemprop="keywords">
+            <!-- <i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> -->
+            <span itemprop="keywords" class="page__category">
             {% for category_word in categories_sorted %}
               <a href="{{ category_word | slugify | prepend: path_type | prepend: site.category_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ category_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
             {% endfor %}
@@ -32,8 +32,8 @@
     {%- if site.tag_archive.path -%}
         {% assign tags_sorted = post.tags | sort_natural %}
         <span class="page__taxonomy">
-            <i class="fas fa-fw fa-tags" aria-hidden="true"></i> 
-            <span itemprop="keywords">
+            <!-- <i class="fas fa-fw fa-tags" aria-hidden="true"></i>  -->
+            <span itemprop="keywords" class="page__tag">
             {% for tag_word in tags_sorted %}
             <a href="{{ tag_word | slugify | prepend: path_type | prepend: site.tag_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="tag">{{ tag_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
             {% endfor %}
