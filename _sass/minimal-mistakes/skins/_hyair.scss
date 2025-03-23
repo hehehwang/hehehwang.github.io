@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Air skin
+   ========================================================================== */
+
+/* Colors */
+$background-color: #eeeeee !default;
+$text-color: #222831 !default;
+$muted-text-color: #393e46 !default;
+$primary-color: #0092ca !default;
+$border-color: mix(#fff, #393e46, 75%) !default;
+$footer-background-color: $primary-color !default;
+$link-color: #393e46 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+/* contrast syntax highlighting (base16) */
+$base00: #ffffff !default;
+$base01: #eee8d5 !default;
+$base02: #93a1a1 !default;
+$base03: #839496 !default;
+$base04: #657b83 !default;
+$base05: #586e75 !default;
+$base06: #073642 !default;
+$base07: #002b36 !default;
+$base08: #dc322f !default;
+$base09: #cb4b16 !default;
+$base0a: #b58900 !default;
+$base0b: #859900 !default;
+$base0c: #2aa198 !default;
+$base0d: #268bd2 !default;
+$base0e: #6c71c4 !default;
+$base0f: #d33682 !default;
+
+.highlight table td { padding: 5px !important; }
+.highlight table pre { margin: 0 !important; }
+.highlight, .highlight .w {
+  color: $base05 !important;
+}
+.highlight .err {
+  color: $base07 !important;
+  background-color: $base08 !important;
+}
+.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: $base04 !important;
+}
+.highlight .cp {
+  color: $base0a !important;
+}
+.highlight .nt {
+  color: $base0a !important;
+}
+.highlight .o, .highlight .ow {
+  color: $base05 !important;
+}
+.highlight .p, .highlight .pi {
+  color: $base05 !important;
+}
+.highlight .gi {
+  color: $base0b !important;
+}
+.highlight .gd {
+  color: $base08 !important;
+}
+.highlight .gh {
+  color: $base0d !important;
+  background-color: $base07 !important;
+  font-weight: bold !important;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: $base0e !important;
+}
+.highlight .kc {
+  color: $base09 !important;
+}
+.highlight .kt {
+  color: $base09 !important;
+}
+.highlight .kd {
+  color: $base09 !important;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: $base0b !important;
+}
+.highlight .sr {
+  color: $base0c !important;
+}
+.highlight .si {
+  color: $base0f !important;
+}
+.highlight .se {
+  color: $base0f !important;
+}
+.highlight .nn {
+  color: $base0a !important;
+}
+.highlight .nc {
+  color: $base0a !important;
+}
+.highlight .no {
+  color: $base0a !important;
+}
+.highlight .na {
+  color: $base0d !important;
+}
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mb, .highlight .mx {
+  color: $base0b !important;
+}
+.highlight .ss {
+  color: $base0b !important;
+}

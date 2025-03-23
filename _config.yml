@@ -13,7 +13,7 @@
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
 # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-minimal_mistakes_skin    : "air" 
+minimal_mistakes_skin    : "hyair" 
 
 # Site Settings
 locale                   : "en-US"
@@ -214,9 +214,9 @@ kramdown:
   enable_coderay: false
   highlighter: rouge
   syntax_highlighter_opts:
-        theme: base16.solarized
         block:
-            line_numbers: true
+           theme: base16.solarized.light
+           line_numbers: true
 
 
 # Sass/SCSS
