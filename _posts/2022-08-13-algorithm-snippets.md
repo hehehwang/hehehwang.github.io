@@ -105,6 +105,86 @@ for (int k = 1; k <= N; k++) {
 (TODO)
 
 # Strongly Connected Component
+## Kosaraju
+### C++
+```c++
+#include <bits/stdc++.h>
+// 2-SAT-4
+// https://www.acmicpc.net/problem/11281
+using namespace std;
+
+const int MXV = 20'020;
+vector<int> adj[MXV], radj[MXV], vis(MXV);
+int sccid, z, x, N, M;
+stack<int> stk;
+// 1 -> 1, -1 -> 2, ...
+int neg(int v) {
+  return v & 1 ? v + 1 : v - 1;
+}
+int iabs(int v) {
+  return 0 < v ? v * 2 - 1 : -2 * v;
+}
+void dfs(int v) {
+  vis[v] = 1;
+  for (auto nv : adj[v]) {
+    if (vis[nv]) continue;
+    dfs(nv);
+  }
+  stk.push(v);
+}
+void rdfs(int v) {
+  vis[v] = sccid;
+  for (auto nv : radj[v]) {
+    if (vis[nv]) continue;
+    rdfs(nv);
+  }
+}
+int main(void) {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  cin >> N >> M;
+  for (int i = 0; i < M; i++) {
+    cin >> z >> x;
+    z = iabs(z);
+    x = iabs(x);
+    adj[neg(z)].push_back(x);
+    adj[neg(x)].push_back(z);
+    radj[z].push_back(neg(x));
+    radj[x].push_back(neg(z));
+  }
+  for (int i = 1; i <= 2 * N; i++)
+    if (!vis[i]) dfs(i);
+  fill(vis.begin(), vis.end(), 0);
+  while (!stk.empty()) {
+    x = stk.top();
+    stk.pop();
+    if (vis[x]) continue;
+    sccid++;
+    rdfs(x);
+  }
+  vector<pair<int, int>> scc_node;
+  int ans1 = 1;
+  for (int i = 1; i <= N; i++)
+    if (vis[2 * i] == vis[2 * i - 1]) ans1 = 0;
+  cout << ans1 << "\n";
+  if (!ans1) return 0;
+
+  vector<int> ans2(N + 1, -1);
+  for (int i = 1; i <= 2 * N; i++)
+    scc_node.push_back({vis[i], i});
+  sort(scc_node.begin(), scc_node.end());
+
+  for (auto [sid, n] : scc_node) {
+    x = (n + 1) / 2;
+    // positive면 0을, negative면 1을 담는다
+    if (ans2[x] == -1)
+      ans2[x] = 1 - (n & 1);
+  }
+  for (int i = 1; i <= N; i++) cout << ans2[i] << " ";
+}
+```
+
+
 ## Tarjan
 ### C++
 ```c++
